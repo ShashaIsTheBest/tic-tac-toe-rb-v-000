@@ -55,7 +55,7 @@ def turn(board)
 end
 
 def turn_count(board)
-  board.count {|position| position == "X" || position == "O" }
+  board.count {|token| token == "X" || token == "O" }
 end
 # #
 def current_player(board)
