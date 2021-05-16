@@ -73,12 +73,12 @@ def full?(board)
 end
 
 def draw?(board)
-  full?(board) && !won?(board)
+  !won?(board) && full?(board)
 end
 #
-# def over?(board)
-#   won?(board) || full?(board) || draw?(board)
-# end
+def over?(board)
+  won?(board) || draw?(board)
+end
 #
 # def winner(board)
 #   if winning_combo = won?(board)
