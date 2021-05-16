@@ -20,10 +20,6 @@ WIN_COMBINATIONS = [
 def input_to_index(user_input)
 	user_input.to_i-1
 end
-
-def move(board, input, player)
-  board[input.to_i-1] = player
-end
 #
 def position_taken?(board, input_to_index)
   if board[input_to_index] != " "
@@ -41,6 +37,10 @@ def valid_move?(board, index)
   end
 end
 #
+
+def move(board, input, player)
+  board[input.to_i-1] = player
+end
 
 def turn(board)
   puts "Please enter 1-9:"
