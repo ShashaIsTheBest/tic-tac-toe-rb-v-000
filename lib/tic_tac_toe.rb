@@ -39,7 +39,7 @@ end
 #
 
 def move(board, index, player)
-  board[index.to_i-1] = player
+  board[index.to_i] = player
 end
 
 def turn(board)
