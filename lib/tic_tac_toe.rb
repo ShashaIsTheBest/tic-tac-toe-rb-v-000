@@ -59,7 +59,7 @@ end
 #   board.each do {|position| position == "X" || position == "O" }
 #   turns += 1
 #     end
-#   end 
+#   end
 #   turns
 # end
 # #
