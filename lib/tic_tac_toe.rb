@@ -21,7 +21,7 @@ def input_to_index(user_input)
 	user_input.to_i-1
 end
 
-def move(board, input, current_player)
+def move(board, input, player)
   board[input.to_i-1] = player
 end
 #
