@@ -21,8 +21,8 @@ def input_to_index(user_input)
 	user_input.to_i-1
 end
 
-def move(board, position, current_player)
-  board[position.to_i-1] = current_player
+def move(board, input, player = "X")
+  board[input.to_i-1] = player
 end
 #
 def position_taken?(board, input_to_index)
@@ -44,12 +44,12 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  user_input = gets.strip
-  if valid_move?(board, index)
-    move(board, index, current_player(board))
-    display_board(board)
-  end
+  input = gets.strip
+  if !valid_move?(board, input)
     turn(board)
+  end
+  move(board, input, current_player(board))
+  display_board(board)
 end
 
 def turn_count(board)
