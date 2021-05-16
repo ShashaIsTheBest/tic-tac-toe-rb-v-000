@@ -38,8 +38,8 @@ def valid_move?(board, index)
 end
 #
 
-def move(board, input, player)
-  board[input.to_i-1] = player
+def move(board, index, player)
+  board[index.to_i-1] = player
 end
 
 def turn(board)
