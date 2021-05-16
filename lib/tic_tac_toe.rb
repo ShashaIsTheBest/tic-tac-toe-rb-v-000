@@ -56,8 +56,8 @@ end
 
 def turn_count(board)
   turns = 0
-  board.count {|position| position == "X" || position == "O" }
-      turns += 1
+  board.each do {|position| position == "X" || position == "O" }
+  turns += 1
   end
   turns
 end
